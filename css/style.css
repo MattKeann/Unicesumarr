@@ -1,0 +1,810 @@
+/* ========================================= */
+/* RESET */
+/* ========================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* ========================================= */
+/* BODY */
+/* ========================================= */
+
+body{
+    font-family:'Segoe UI',sans-serif;
+    background:#000;
+    color:white;
+    overflow-x:hidden;
+}
+
+/* ========================================= */
+/* HEADER */
+/* ========================================= */
+
+header{
+    position:fixed;
+    top:0;
+    left:0;
+
+    width:100%;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:25px 8%;
+
+    z-index:1000;
+
+    background:rgba(0,0,0,0.35);
+
+    backdrop-filter:blur(8px);
+
+    border-bottom:1px solid rgba(255,255,255,0.08);
+}
+
+/* BARRA PESQUISA */
+
+.search-box{
+
+width:100%;
+
+display:flex;
+
+justify-content:center;
+
+margin-bottom:40px;
+}
+
+.search-box input{
+
+width:400px;
+
+max-width:90%;
+
+padding:15px 20px;
+
+border:none;
+
+border-radius:12px;
+
+background:#111;
+
+color:white;
+
+font-size:1rem;
+
+outline:none;
+
+border:1px solid rgba(255,255,255,0.1);
+}
+
+.search-box input:focus{
+
+border-color:#f1c40f;
+
+box-shadow:0 0 15px rgba(241,196,15,0.3);
+}
+
+/* LOGO */
+.logo{
+    font-size:1.8rem;
+    font-weight:800;
+
+    letter-spacing:3px;
+
+    color:#f1c40f;
+
+    cursor:pointer;
+}
+
+/* MENU */
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:35px;
+}
+
+nav ul li a{
+    color:white;
+    text-decoration:none;
+
+    font-size:1rem;
+    font-weight:500;
+
+    transition:0.3s;
+}
+
+nav ul li a:hover{
+    color:#f1c40f;
+}
+
+/* ========================================= */
+/* HERO HOME */
+/* ========================================= */
+
+.hero{
+    position:relative;
+
+    width:100%;
+    height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    background:
+    linear-gradient(
+        rgba(0,0,0,0.75),
+        rgba(0,0,0,0.75)
+    ),
+    url('../assets/fundo.png');
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+}
+
+/* OVERLAY */
+.overlay{
+    position:absolute;
+    inset:0;
+
+    background:
+    radial-gradient(
+        circle at center,
+        rgba(241,196,15,0.08),
+        transparent 60%
+    );
+}
+
+/* CONTEÚDO */
+.hero-content{
+    position:relative;
+
+    z-index:2;
+
+    max-width:800px;
+
+    padding:20px;
+}
+
+/* TAG */
+.tag{
+    display:inline-block;
+
+    margin-bottom:20px;
+
+    padding:10px 18px;
+
+    border-radius:50px;
+
+    border:1px solid rgba(255,255,255,0.15);
+
+    background:rgba(255,255,255,0.05);
+
+    backdrop-filter:blur(6px);
+
+    font-size:0.8rem;
+
+    letter-spacing:2px;
+}
+
+/* TÍTULO */
+.hero h1{
+    font-size:5rem;
+
+    font-weight:800;
+
+    line-height:1.1;
+
+    margin-bottom:20px;
+}
+
+/* TEXTO */
+.hero p{
+    font-size:1.2rem;
+
+    color:#d1d1d1;
+
+    line-height:1.7;
+
+    margin-bottom:35px;
+}
+
+/* ========================================= */
+/* BOTÕES */
+/* ========================================= */
+
+.buttons{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+
+    flex-wrap:wrap;
+}
+
+/* BOTÃO PRINCIPAL */
+.btn-yellow{
+    background:#f1c40f;
+    color:black;
+
+    border:none;
+
+    padding:16px 40px;
+
+    border-radius:10px;
+
+    font-size:1rem;
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:0.3s;
+}
+
+.btn-yellow:hover{
+    transform:translateY(-5px);
+
+    background:#ffd93b;
+
+    box-shadow:
+    0 10px 25px rgba(241,196,15,0.35);
+}
+
+/* BOTÃO OUTLINE */
+.btn-outline{
+    background:transparent;
+    color:white;
+
+    border:1px solid rgba(255,255,255,0.2);
+
+    padding:16px 40px;
+
+    border-radius:10px;
+
+    font-size:1rem;
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:0.3s;
+}
+
+.btn-outline:hover{
+    background:white;
+    color:black;
+}
+
+/* ========================================= */
+/* FOOTER */
+/* ========================================= */
+
+footer{
+    width:100%;
+
+    padding:25px;
+
+    text-align:center;
+
+    color:#888;
+
+    background:#050505;
+
+    margin-top:60px;
+}
+
+/* ========================================= */
+/* PÁGINA EXERCÍCIOS */
+/* ========================================= */
+
+.page-exercicios{
+    background:
+    linear-gradient(
+        rgba(0,0,0,0.88),
+        rgba(0,0,0,0.88)
+    ),
+    url('../assets/azul.jpg');
+
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+
+    min-height:100vh;
+
+    color:white;
+}
+
+/* CONTAINER */
+.treinos-container{
+    padding-top:140px;
+    padding-left:5%;
+    padding-right:5%;
+    padding-bottom:80px;
+}
+
+/* TÍTULO */
+.treinos-container h1{
+    text-align:center;
+
+    font-size:3rem;
+
+    margin-bottom:50px;
+
+    font-weight:800;
+}
+
+/* GRID */
+.grid-treinos{
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(230px,1fr));
+
+    gap:30px;
+
+    max-width:1400px;
+
+    margin:0 auto;
+}
+
+/* CARD */
+.card{
+    background:
+    rgba(20,20,20,0.75);
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    text-decoration:none;
+
+    color:white;
+
+    border:1px solid rgba(255,255,255,0.08);
+
+    transition:0.35s;
+
+    backdrop-filter:blur(6px);
+}
+
+/* HOVER */
+.card:hover{
+    transform:
+    translateY(-10px)
+    scale(1.02);
+
+    border-color:#f1c40f;
+
+    box-shadow:
+    0 15px 35px rgba(0,0,0,0.5);
+}
+
+/* IMAGEM */
+.card-img{
+    height:260px;
+
+    background-size:cover;
+    background-position:center;
+
+    transition:0.5s;
+}
+
+/* HOVER IMAGEM */
+.card:hover .card-img{
+    transform:scale(1.08);
+}
+
+/* TEXTO */
+.card h2{
+    padding:22px;
+
+    text-align:center;
+
+    font-size:1.1rem;
+
+    letter-spacing:1px;
+}
+
+/* ========================================= */
+/* SOBRE */
+/* ========================================= */
+
+.sobre{
+    padding:100px 10%;
+
+    text-align:center;
+
+    background:#0d0d0d;
+}
+
+.sobre h2{
+    font-size:2.5rem;
+
+    margin-bottom:20px;
+}
+
+.sobre p{
+    color:#ccc;
+
+    max-width:700px;
+
+    margin:0 auto;
+
+    line-height:1.8;
+}
+
+/* ========================================= */
+/* CONTATO */
+/* ========================================= */
+
+.contato{
+    padding:100px 10%;
+
+    text-align:center;
+}
+
+.contato h2{
+    font-size:2.5rem;
+
+    margin-bottom:40px;
+}
+
+/* FORM */
+form{
+    max-width:600px;
+
+    margin:0 auto;
+
+    display:flex;
+    flex-direction:column;
+
+    gap:20px;
+}
+
+/* INPUTS */
+form input,
+form textarea{
+    padding:18px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#111;
+
+    color:white;
+
+    font-size:1rem;
+}
+
+/* TEXTAREA */
+form textarea{
+    resize:none;
+
+    height:150px;
+}
+
+/* ========================================= */
+/* PÁGINAS MUSCULARES */
+/* ========================================= */
+
+.musculo-hero{
+    position:relative;
+
+    height:55vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    background:
+    linear-gradient(
+        rgba(0,0,0,0.82),
+        rgba(0,0,0,0.82)
+    ),
+    url('../assets/fundo.png');
+
+    background-size:cover;
+    background-position:center;
+}
+
+/* OVERLAY */
+.musculo-overlay{
+    position:absolute;
+    inset:0;
+
+    background:
+    radial-gradient(
+        circle,
+        rgba(241,196,15,0.08),
+        transparent 60%
+    );
+}
+
+/* CONTEÚDO */
+.musculo-content{
+    position:relative;
+
+    z-index:2;
+
+    max-width:700px;
+
+    padding:20px;
+}
+
+/* TAG */
+.musculo-tag{
+    display:inline-block;
+
+    padding:10px 18px;
+
+    border-radius:50px;
+
+    background:rgba(255,255,255,0.06);
+
+    border:1px solid rgba(255,255,255,0.12);
+
+    margin-bottom:20px;
+
+    letter-spacing:2px;
+
+    font-size:0.8rem;
+}
+
+/* TÍTULO */
+.musculo-content h1{
+    font-size:4rem;
+
+    margin-bottom:20px;
+}
+
+/* TEXTO */
+.musculo-content p{
+    color:#ccc;
+
+    line-height:1.8;
+
+    font-size:1.1rem;
+}
+
+/* ========================================= */
+/* LISTA DE EXERCÍCIOS */
+/* ========================================= */
+
+.exercicios-lista{
+    max-width:1300px;
+
+    margin:80px auto;
+
+    padding:0 5%;
+
+    display:flex;
+    flex-direction:column;
+
+    gap:40px;
+}
+
+/* CARD EXERCÍCIO */
+.exercise-card{
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:40px;
+
+    background:
+    rgba(15,15,15,0.82);
+
+    border-radius:25px;
+
+    padding:35px;
+
+    border:1px solid rgba(255,255,255,0.08);
+
+    backdrop-filter:blur(5px);
+
+    transition:0.3s;
+}
+
+/* HOVER */
+.exercise-card:hover{
+    transform:translateY(-8px);
+
+    border-color:#f1c40f;
+
+    box-shadow:
+    0 20px 40px rgba(0,0,0,0.35);
+}
+
+/* INFO */
+.exercise-info h2{
+    font-size:2rem;
+
+    margin-bottom:20px;
+}
+
+.exercise-info p{
+    color:#ccc;
+
+    line-height:1.8;
+
+    margin-bottom:25px;
+}
+
+/* LISTA */
+.exercise-info ul{
+    padding-left:20px;
+
+    display:flex;
+    flex-direction:column;
+
+    gap:15px;
+}
+
+/* VÍDEO */
+.exercise-video{
+    overflow:hidden;
+
+    border-radius:20px;
+
+    min-height:320px;
+
+    background:#111;
+
+    border:1px solid rgba(255,255,255,0.08);
+}
+
+/* IFRAME */
+.exercise-video iframe{
+    width:100%;
+
+    height:100%;
+
+    min-height:320px;
+
+    border:none;
+
+    display:block;
+}
+
+/* ========================================= */
+/* RESPONSIVO */
+/* ========================================= */
+
+/* TABLET */
+@media (max-width:1024px){
+
+    .hero h1{
+        font-size:3.5rem;
+    }
+
+    .treinos-container h1{
+        font-size:2.5rem;
+    }
+
+    header{
+        padding:20px 5%;
+    }
+
+}
+
+/* MOBILE */
+@media (max-width:768px){
+
+    /* HEADER */
+    header{
+        flex-direction:column;
+
+        gap:15px;
+
+        padding:20px;
+    }
+
+    nav ul{
+        gap:15px;
+
+        flex-wrap:wrap;
+
+        justify-content:center;
+    }
+
+    /* HERO */
+    .hero{
+        padding:20px;
+    }
+
+    .hero h1{
+        font-size:2.3rem;
+
+        line-height:1.2;
+    }
+
+    .hero p{
+        font-size:1rem;
+    }
+
+    /* BOTÕES */
+    .buttons{
+        flex-direction:column;
+
+        width:100%;
+    }
+
+    .btn-yellow,
+    .btn-outline{
+        width:100%;
+    }
+
+    /* TÍTULO */
+    .treinos-container h1{
+        font-size:2rem;
+    }
+
+    /* GRID */
+    .grid-treinos{
+        grid-template-columns:1fr;
+
+        gap:20px;
+    }
+
+    /* IMAGEM */
+    .card-img{
+        height:220px;
+    }
+
+    /* EXERCÍCIOS */
+    .exercise-card{
+        grid-template-columns:1fr;
+    }
+
+    .musculo-content h1{
+        font-size:2.5rem;
+    }
+
+}
+
+/* CELULARES PEQUENOS */
+@media (max-width:480px){
+
+    .hero h1{
+        font-size:1.9rem;
+    }
+
+    .logo{
+        font-size:1.3rem;
+    }
+
+    .treinos-container{
+        padding-top:170px;
+    }
+
+}
+.card-img{
+
+    height:260px;
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-repeat:no-repeat;
+
+    transition:0.5s;
+}
+
+.card{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+    transition:0.6s;
+}
+
